@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <h1>{{ page.title }}</h1>
+
+        {{ content }}
+        <div id="footer">
+           <hr>
+	   Cameron Stewart &lt;<a href="mailto:cameron@shptech.com">cameron@shptech.com</a>&gt; | <a href="https://github.com/canoon">github.com/canoon</a>
+        </div>
+        <script>
+                function resizeHandle() {
+                        var footer = $("#footer");
+                        var size = ($(window).height() - footer.position().top - footer.height() - ($("body").css("margin-bottom").split("px")[0]));
+                        if (size > 0) {
+				footer.css("margin-top", size);
+			} else {
+				footer.css("margin-top", "auto");
+			} 
+		}
+		$(window).resize(resizeHandle);
+		resizeHandle();
+        </script>
+    </body>
+</html>
