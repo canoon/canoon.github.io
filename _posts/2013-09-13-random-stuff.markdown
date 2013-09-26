@@ -28,3 +28,13 @@ PS: Turning on warnings is cheating.
     puts "Hello World"
 }
 {% endhighlight %}
+
+## Security whats that?
+
+> Nobody knows how much space should be reserved for name.  So, calling
+> openpty() or forkpty() with non-NULL name may not be secure. 
+
+[http://man7.org/linux/man-pages/man3/openpty.3.html](http://man7.org/linux/man-pages/man3/openpty.3.html)
+
+
+  
